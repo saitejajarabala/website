@@ -4,7 +4,7 @@
     "herName": "My Love",
     "topLine": "Some memories… and the stories behind them.",
     "updated": "Feb 2026",
-    "audioSrc": "assets/audio/love.mp3",
+    "audioSrc": "",
     "letterTitle": "To my favorite person ❤️",
     "letterBody": "Write your final letter here.\n\nKeep it honest.\nKeep it simple.\nNo need to make it long — make it real.\n\n(You can add new lines like this.)",
     "letterSign": "— Yours"
@@ -17,7 +17,7 @@
       "year": 2024,
       "month": "June",
       "tag": "milestone",
-      "src": "assets/images/001.jpg",
+      "src": "images/001.jpg",
       "preview": "The day everything started feeling real.",
       "story": "Write the story for this photo here."
     },
@@ -28,7 +28,7 @@
       "year": 2024,
       "month": "August",
       "tag": "date",
-      "src": "assets/videos/01.mp4",
+      "src": "videos/01.mp4",
       "preview": "This one always makes me smile.",
       "story": "Write the story behind this video here."
     }

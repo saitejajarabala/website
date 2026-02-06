@@ -1,6 +1,10 @@
 # ❤️ Memory Website
 
-A small website made with love.
-Click on each photo to read the story behind the moment.
+A personal memory website created as a gift.
 
-Built as a personal gift.
+This site captures moments through photos and videos, each paired with a short story behind it.  
+Designed as a private, timeline-based experience with subtle animations, music, and a final letter.
+
+🔗 Website: https://saitejajarabala.github.io/website/
+
+Built with care, meant for one person.
