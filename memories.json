@@ -1,36 +1,410 @@
-{
-  "site": {
-    "pin": "1430",
-    "herName": "My Love",
-    "topLine": "Some memories… and the stories behind them.",
-    "updated": "Feb 2026",
-    "audioSrc": "",
-    "letterTitle": "To my favorite person ❤️",
-    "letterBody": "Write your final letter here.\n\nKeep it honest.\nKeep it simple.\nNo need to make it long — make it real.\n\n(You can add new lines like this.)",
-    "letterSign": "— Yours"
-  },
-  "items": [
-    {
-      "id": "001",
-      "type": "image",
-      "title": "First photo together",
-      "year": 2024,
-      "month": "June",
-      "tag": "milestone",
-      "src": "images/001.jpg",
-      "preview": "The day everything started feeling real.",
-      "story": "Write the story for this photo here."
-    },
-    {
-      "id": "v01",
-      "type": "video",
-      "title": "That clip I rewatch",
-      "year": 2024,
-      "month": "August",
-      "tag": "date",
-      "src": "videos/01.mp4",
-      "preview": "This one always makes me smile.",
-      "story": "Write the story behind this video here."
-    }
-  ]
+﻿{
+    "site":  {
+                 "pin":  "1430",
+                 "herName":  "My Love",
+                 "topLine":  "Some memories and the stories behind them.",
+                 "updated":  "Feb 2026",
+                 "audioSrc":  "",
+                 "letterTitle":  "To my favorite person ",
+                 "letterBody":  "Write your final letter here.",
+                 "letterSign":  " Yours"
+             },
+    "items":  [
+                  {
+                      "id":  "001",
+                      "type":  "image",
+                      "title":  "Memory 001",
+                      "year":  2024,
+                      "month":  "June",
+                      "tag":  "milestone",
+                      "src":  "images/001.jpg",
+                      "preview":  "Tap to read the story.",
+                      "story":  "Write your story for Memory 001 here."
+                  },
+                  {
+                      "id":  "002",
+                      "type":  "image",
+                      "title":  "Memory 002",
+                      "year":  2024,
+                      "month":  "June",
+                      "tag":  "milestone",
+                      "src":  "images/002.JPG",
+                      "preview":  "Tap to read the story.",
+                      "story":  "Write your story for Memory 002 here."
+                  },
+                  {
+                      "id":  "003",
+                      "type":  "image",
+                      "title":  "Memory 003",
+                      "year":  2024,
+                      "month":  "June",
+                      "tag":  "milestone",
+                      "src":  "images/003.jpg",
+                      "preview":  "Tap to read the story.",
+                      "story":  "Write your story for Memory 003 here."
+                  },
+                  {
+                      "id":  "004",
+                      "type":  "image",
+                      "title":  "Memory 004",
+                      "year":  2024,
+                      "month":  "June",
+                      "tag":  "milestone",
+                      "src":  "images/004.jpg",
+                      "preview":  "Tap to read the story.",
+                      "story":  "Write your story for Memory 004 here."
+                  },
+                  {
+                      "id":  "005",
+                      "type":  "image",
+                      "title":  "Memory 005",
+                      "year":  2024,
+                      "month":  "June",
+                      "tag":  "milestone",
+                      "src":  "images/005.jpg",
+                      "preview":  "Tap to read the story.",
+                      "story":  "Write your story for Memory 005 here."
+                  },
+                  {
+                      "id":  "006",
+                      "type":  "image",
+                      "title":  "Memory 006",
+                      "year":  2024,
+                      "month":  "June",
+                      "tag":  "milestone",
+                      "src":  "images/006.jpg",
+                      "preview":  "Tap to read the story.",
+                      "story":  "Write your story for Memory 006 here."
+                  },
+                  {
+                      "id":  "007",
+                      "type":  "image",
+                      "title":  "Memory 007",
+                      "year":  2024,
+                      "month":  "June",
+                      "tag":  "milestone",
+                      "src":  "images/007.webp",
+                      "preview":  "Tap to read the story.",
+                      "story":  "Write your story for Memory 007 here."
+                  },
+                  {
+                      "id":  "008",
+                      "type":  "image",
+                      "title":  "Memory 008",
+                      "year":  2024,
+                      "month":  "June",
+                      "tag":  "milestone",
+                      "src":  "images/008.jpg",
+                      "preview":  "Tap to read the story.",
+                      "story":  "Write your story for Memory 008 here."
+                  },
+                  {
+                      "id":  "009",
+                      "type":  "image",
+                      "title":  "Memory 009",
+                      "year":  2024,
+                      "month":  "June",
+                      "tag":  "milestone",
+                      "src":  "images/009.jpg",
+                      "preview":  "Tap to read the story.",
+                      "story":  "Write your story for Memory 009 here."
+                  },
+                  {
+                      "id":  "010",
+                      "type":  "image",
+                      "title":  "Memory 010",
+                      "year":  2024,
+                      "month":  "June",
+                      "tag":  "milestone",
+                      "src":  "images/010.jpg",
+                      "preview":  "Tap to read the story.",
+                      "story":  "Write your story for Memory 010 here."
+                  },
+                  {
+                      "id":  "011",
+                      "type":  "image",
+                      "title":  "Memory 011",
+                      "year":  2024,
+                      "month":  "June",
+                      "tag":  "milestone",
+                      "src":  "images/011.jpg",
+                      "preview":  "Tap to read the story.",
+                      "story":  "Write your story for Memory 011 here."
+                  },
+                  {
+                      "id":  "012",
+                      "type":  "image",
+                      "title":  "Memory 012",
+                      "year":  2024,
+                      "month":  "June",
+                      "tag":  "milestone",
+                      "src":  "images/012.jpg",
+                      "preview":  "Tap to read the story.",
+                      "story":  "Write your story for Memory 012 here."
+                  },
+                  {
+                      "id":  "013",
+                      "type":  "image",
+                      "title":  "Memory 013",
+                      "year":  2024,
+                      "month":  "June",
+                      "tag":  "milestone",
+                      "src":  "images/013.jpg",
+                      "preview":  "Tap to read the story.",
+                      "story":  "Write your story for Memory 013 here."
+                  },
+                  {
+                      "id":  "014",
+                      "type":  "image",
+                      "title":  "Memory 014",
+                      "year":  2024,
+                      "month":  "June",
+                      "tag":  "milestone",
+                      "src":  "images/014.jpg",
+                      "preview":  "Tap to read the story.",
+                      "story":  "Write your story for Memory 014 here."
+                  },
+                  {
+                      "id":  "015",
+                      "type":  "image",
+                      "title":  "Memory 015",
+                      "year":  2024,
+                      "month":  "June",
+                      "tag":  "milestone",
+                      "src":  "images/015.jpg",
+                      "preview":  "Tap to read the story.",
+                      "story":  "Write your story for Memory 015 here."
+                  },
+                  {
+                      "id":  "016",
+                      "type":  "image",
+                      "title":  "Memory 016",
+                      "year":  2024,
+                      "month":  "June",
+                      "tag":  "milestone",
+                      "src":  "images/016.jpg",
+                      "preview":  "Tap to read the story.",
+                      "story":  "Write your story for Memory 016 here."
+                  },
+                  {
+                      "id":  "017",
+                      "type":  "image",
+                      "title":  "Memory 017",
+                      "year":  2024,
+                      "month":  "June",
+                      "tag":  "milestone",
+                      "src":  "images/017.jpg",
+                      "preview":  "Tap to read the story.",
+                      "story":  "Write your story for Memory 017 here."
+                  },
+                  {
+                      "id":  "018",
+                      "type":  "image",
+                      "title":  "Memory 018",
+                      "year":  2024,
+                      "month":  "June",
+                      "tag":  "milestone",
+                      "src":  "images/018.jpg",
+                      "preview":  "Tap to read the story.",
+                      "story":  "Write your story for Memory 018 here."
+                  },
+                  {
+                      "id":  "019",
+                      "type":  "image",
+                      "title":  "Memory 019",
+                      "year":  2024,
+                      "month":  "June",
+                      "tag":  "milestone",
+                      "src":  "images/019.jpg",
+                      "preview":  "Tap to read the story.",
+                      "story":  "Write your story for Memory 019 here."
+                  },
+                  {
+                      "id":  "020",
+                      "type":  "image",
+                      "title":  "Memory 020",
+                      "year":  2024,
+                      "month":  "June",
+                      "tag":  "milestone",
+                      "src":  "images/020.jpg",
+                      "preview":  "Tap to read the story.",
+                      "story":  "Write your story for Memory 020 here."
+                  },
+                  {
+                      "id":  "021",
+                      "type":  "image",
+                      "title":  "Memory 021",
+                      "year":  2024,
+                      "month":  "June",
+                      "tag":  "milestone",
+                      "src":  "images/021.jpg",
+                      "preview":  "Tap to read the story.",
+                      "story":  "Write your story for Memory 021 here."
+                  },
+                  {
+                      "id":  "022",
+                      "type":  "image",
+                      "title":  "Memory 022",
+                      "year":  2024,
+                      "month":  "June",
+                      "tag":  "milestone",
+                      "src":  "images/022.jpg",
+                      "preview":  "Tap to read the story.",
+                      "story":  "Write your story for Memory 022 here."
+                  },
+                  {
+                      "id":  "023",
+                      "type":  "image",
+                      "title":  "Memory 023",
+                      "year":  2024,
+                      "month":  "June",
+                      "tag":  "milestone",
+                      "src":  "images/023.jpg",
+                      "preview":  "Tap to read the story.",
+                      "story":  "Write your story for Memory 023 here."
+                  },
+                  {
+                      "id":  "024",
+                      "type":  "image",
+                      "title":  "Memory 024",
+                      "year":  2024,
+                      "month":  "June",
+                      "tag":  "milestone",
+                      "src":  "images/024.jpg",
+                      "preview":  "Tap to read the story.",
+                      "story":  "Write your story for Memory 024 here."
+                  },
+                  {
+                      "id":  "025",
+                      "type":  "image",
+                      "title":  "Memory 025",
+                      "year":  2024,
+                      "month":  "June",
+                      "tag":  "milestone",
+                      "src":  "images/025.jpg",
+                      "preview":  "Tap to read the story.",
+                      "story":  "Write your story for Memory 025 here."
+                  },
+                  {
+                      "id":  "026",
+                      "type":  "image",
+                      "title":  "Memory 026",
+                      "year":  2024,
+                      "month":  "June",
+                      "tag":  "milestone",
+                      "src":  "images/026.jpg",
+                      "preview":  "Tap to read the story.",
+                      "story":  "Write your story for Memory 026 here."
+                  },
+                  {
+                      "id":  "027",
+                      "type":  "image",
+                      "title":  "Memory 027",
+                      "year":  2024,
+                      "month":  "June",
+                      "tag":  "milestone",
+                      "src":  "images/027.jpg",
+                      "preview":  "Tap to read the story.",
+                      "story":  "Write your story for Memory 027 here."
+                  },
+                  {
+                      "id":  "028",
+                      "type":  "image",
+                      "title":  "Memory 028",
+                      "year":  2024,
+                      "month":  "June",
+                      "tag":  "milestone",
+                      "src":  "images/028.jpg",
+                      "preview":  "Tap to read the story.",
+                      "story":  "Write your story for Memory 028 here."
+                  },
+                  {
+                      "id":  "029",
+                      "type":  "image",
+                      "title":  "Memory 029",
+                      "year":  2024,
+                      "month":  "June",
+                      "tag":  "milestone",
+                      "src":  "images/029.jpg",
+                      "preview":  "Tap to read the story.",
+                      "story":  "Write your story for Memory 029 here."
+                  },
+                  {
+                      "id":  "030",
+                      "type":  "image",
+                      "title":  "Memory 030",
+                      "year":  2024,
+                      "month":  "June",
+                      "tag":  "milestone",
+                      "src":  "images/030.jpg",
+                      "preview":  "Tap to read the story.",
+                      "story":  "Write your story for Memory 030 here."
+                  },
+                  {
+                      "id":  "031",
+                      "type":  "image",
+                      "title":  "Memory 031",
+                      "year":  2024,
+                      "month":  "June",
+                      "tag":  "milestone",
+                      "src":  "images/031.jpg",
+                      "preview":  "Tap to read the story.",
+                      "story":  "Write your story for Memory 031 here."
+                  },
+                  {
+                      "id":  "v01",
+                      "type":  "video",
+                      "title":  "Video 01",
+                      "year":  2024,
+                      "month":  "June",
+                      "tag":  "date",
+                      "src":  "videos/01.mp4",
+                      "preview":  "Tap to play and read the story.",
+                      "story":  "Write your story for Video 01 here."
+                  },
+                  {
+                      "id":  "v02",
+                      "type":  "video",
+                      "title":  "Video 02",
+                      "year":  2024,
+                      "month":  "June",
+                      "tag":  "date",
+                      "src":  "videos/02.mp4",
+                      "preview":  "Tap to play and read the story.",
+                      "story":  "Write your story for Video 02 here."
+                  },
+                  {
+                      "id":  "v03",
+                      "type":  "video",
+                      "title":  "Video 03",
+                      "year":  2024,
+                      "month":  "June",
+                      "tag":  "date",
+                      "src":  "videos/03.mp4",
+                      "preview":  "Tap to play and read the story.",
+                      "story":  "Write your story for Video 03 here."
+                  },
+                  {
+                      "id":  "v04",
+                      "type":  "video",
+                      "title":  "Video 04",
+                      "year":  2024,
+                      "month":  "June",
+                      "tag":  "date",
+                      "src":  "videos/04.mp4",
+                      "preview":  "Tap to play and read the story.",
+                      "story":  "Write your story for Video 04 here."
+                  },
+                  {
+                      "id":  "v05",
+                      "type":  "video",
+                      "title":  "Video 05",
+                      "year":  2024,
+                      "month":  "June",
+                      "tag":  "date",
+                      "src":  "videos/05.mp4",
+                      "preview":  "Tap to play and read the story.",
+                      "story":  "Write your story for Video 05 here."
+                  }
+              ]
 }
