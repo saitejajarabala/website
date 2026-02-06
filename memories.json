@@ -1,0 +1,30 @@
+{
+  "site": {
+    "herName": "My Love",
+    "topLine": "Some memories… and the little stories behind them.",
+    "closingLine": "If I could freeze time, I’d freeze it in the moments where you’re smiling.",
+    "updated": "Feb 2026"
+  },
+  "items": [
+    {
+      "id": "001",
+      "type": "image",
+      "title": "Our first picture",
+      "date": "June 2024",
+      "tag": "milestone",
+      "src": "assets/images/001.jpg",
+      "preview": "The day everything started feeling real.",
+      "story": "Write your full story here. Keep it personal, short, and clean. 4–8 lines is perfect."
+    },
+    {
+      "id": "002",
+      "type": "video",
+      "title": "That little clip I love",
+      "date": "Aug 2024",
+      "tag": "date",
+      "src": "assets/videos/001.mp4",
+      "preview": "I keep rewatching this and smiling.",
+      "story": "Explain why this moment matters. What you felt. What you noticed about her."
+    }
+  ]
+}

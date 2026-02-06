@@ -1,31 +1,83 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>For You ❤️</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#0b0c10" />
   <link rel="stylesheet" href="style.css" />
 </head>
+
 <body>
+  <div class="bg"></div>
 
   <header class="hero">
-    <h1>For My Love ❤️</h1>
-    <p>A few memories I want you to keep forever.</p>
+    <div class="hero-inner">
+      <div class="badge">A small gift</div>
+      <h1>For <span class="accent" id="herName">My Love</span> ❤️</h1>
+      <p class="subtitle" id="topLine">Some memories… and the little stories behind them.</p>
+
+      <div class="hero-actions">
+        <a class="btn" href="#memories">Open Memories</a>
+        <button class="btn ghost" id="toggleHearts">Toggle Love</button>
+      </div>
+
+      <div class="meta">
+        <span id="metaCount">0 memories</span>
+        <span class="dot">•</span>
+        <span id="metaUpdated">updated today</span>
+      </div>
+    </div>
   </header>
 
-  <main class="gallery" id="gallery"></main>
+  <main class="container" id="memories">
+    <section class="toolbar">
+      <input id="search" type="text" placeholder="Search (e.g., ‘trip’, ‘birthday’, ‘first’)…" />
+      <select id="filter">
+        <option value="all">All</option>
+        <option value="image">Photos</option>
+        <option value="video">Videos</option>
+        <option value="trip">Trip</option>
+        <option value="date">Date</option>
+        <option value="funny">Funny</option>
+        <option value="milestone">Milestone</option>
+      </select>
+    </section>
 
-  <!-- Modal -->
-  <div class="modal" id="modal">
-    <div class="modal-content">
-      <span class="close" id="closeBtn">&times;</span>
-      <img id="modalImg" />
-      <h2 id="modalTitle"></h2>
-      <p id="modalDate"></p>
-      <p id="modalStory"></p>
+    <section class="grid" id="grid"></section>
+
+    <section class="closing">
+      <h2>One last note</h2>
+      <p id="closingLine">
+        If I could freeze time, I’d freeze it in the moments where you’re smiling.
+      </p>
+    </section>
+  </main>
+
+  <!-- Lightbox -->
+  <div class="lightbox" id="lightbox" aria-hidden="true">
+    <div class="lb-backdrop" id="lbBackdrop"></div>
+
+    <div class="lb-card" role="dialog" aria-modal="true">
+      <button class="lb-close" id="lbClose" aria-label="Close">×</button>
+
+      <div class="lb-media">
+        <img id="lbImg" alt="" />
+        <video id="lbVideo" controls playsinline></video>
+      </div>
+
+      <div class="lb-body">
+        <div class="pill" id="lbPill">Memory</div>
+        <h3 id="lbTitle"></h3>
+        <p class="lb-date" id="lbDate"></p>
+        <p class="lb-story" id="lbStory"></p>
+      </div>
     </div>
   </div>
 
-  <script src="script.js"></script>
+  <!-- floating hearts (optional) -->
+  <div class="hearts" id="hearts" aria-hidden="true"></div>
+
+  <script src="app.js"></script>
 </body>
 </html>
