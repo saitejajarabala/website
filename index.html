@@ -11,46 +11,91 @@
 <body>
   <div class="bg"></div>
 
-  <header class="hero">
+  <!-- PIN Lock -->
+  <div class="lock" id="lock">
+    <div class="lock-card">
+      <div class="lock-badge">Private</div>
+      <h1 class="lock-title">For <span class="accent">My Love</span> ❤️</h1>
+      <p class="lock-sub">Enter our PIN to open the memories.</p>
+
+      <div class="pin-row">
+        <input id="pin" type="password" inputmode="numeric" maxlength="6" placeholder="••••" />
+        <button class="btn" id="unlockBtn">Unlock</button>
+      </div>
+      <p class="lock-hint" id="lockHint"></p>
+      <div class="lock-mini">Tip: You can change the PIN in <code>memories.json</code></div>
+    </div>
+  </div>
+
+  <header class="hero" id="top">
     <div class="hero-inner">
       <div class="badge">A small gift</div>
       <h1>For <span class="accent" id="herName">My Love</span> ❤️</h1>
-      <p class="subtitle" id="topLine">Some memories… and the little stories behind them.</p>
+      <p class="subtitle" id="topLine">Some memories… and the stories behind them.</p>
 
-      <div class="hero-actions">
-        <a class="btn" href="#memories">Open Memories</a>
-        <button class="btn ghost" id="toggleHearts">Toggle Love</button>
+      <div class="actions">
+        <button class="btn" id="modeTimeline">Timeline</button>
+        <button class="btn ghost" id="modeGallery">Gallery</button>
+        <a class="btn ghost" href="#letter">Final Letter</a>
+
+        <button class="btn music" id="musicBtn" title="Play/Pause">
+          <span id="musicIcon">▶</span> Love Song
+        </button>
       </div>
 
       <div class="meta">
         <span id="metaCount">0 memories</span>
         <span class="dot">•</span>
-        <span id="metaUpdated">updated today</span>
+        <span id="metaUpdated">updated</span>
       </div>
     </div>
   </header>
 
-  <main class="container" id="memories">
-    <section class="toolbar">
-      <input id="search" type="text" placeholder="Search (e.g., ‘trip’, ‘birthday’, ‘first’)…" />
-      <select id="filter">
-        <option value="all">All</option>
-        <option value="image">Photos</option>
-        <option value="video">Videos</option>
-        <option value="trip">Trip</option>
-        <option value="date">Date</option>
-        <option value="funny">Funny</option>
-        <option value="milestone">Milestone</option>
-      </select>
+  <main class="container">
+    <!-- TIMELINE -->
+    <section id="timelineView" class="view">
+      <div class="toolbar">
+        <input id="searchT" type="text" placeholder="Search (trip, birthday, first…)…" />
+        <select id="filterT">
+          <option value="all">All</option>
+          <option value="image">Photos</option>
+          <option value="video">Videos</option>
+          <option value="trip">Trip</option>
+          <option value="date">Date</option>
+          <option value="funny">Funny</option>
+          <option value="milestone">Milestone</option>
+        </select>
+      </div>
+
+      <div id="timeline"></div>
     </section>
 
-    <section class="grid" id="grid"></section>
+    <!-- GALLERY -->
+    <section id="galleryView" class="view hidden">
+      <div class="toolbar">
+        <input id="searchG" type="text" placeholder="Search memories…" />
+        <select id="filterG">
+          <option value="all">All</option>
+          <option value="image">Photos</option>
+          <option value="video">Videos</option>
+          <option value="trip">Trip</option>
+          <option value="date">Date</option>
+          <option value="funny">Funny</option>
+          <option value="milestone">Milestone</option>
+        </select>
+      </div>
 
-    <section class="closing">
-      <h2>One last note</h2>
-      <p id="closingLine">
-        If I could freeze time, I’d freeze it in the moments where you’re smiling.
-      </p>
+      <div class="grid" id="grid"></div>
+    </section>
+
+    <!-- LETTER -->
+    <section id="letter" class="letter">
+      <div class="letter-card">
+        <div class="badge">Final letter</div>
+        <h2 id="letterTitle">To my favorite person ❤️</h2>
+        <p class="letter-body" id="letterBody"></p>
+        <div class="letter-sign" id="letterSign">— Always yours</div>
+      </div>
     </section>
   </main>
 
@@ -75,8 +120,11 @@
     </div>
   </div>
 
-  <!-- floating hearts (optional) -->
-  <div class="hearts" id="hearts" aria-hidden="true"></div>
+  <!-- Audio -->
+  <audio id="audio" preload="none"></audio>
+
+  <!-- Hearts -->
+  <div class="hearts on" id="hearts" aria-hidden="true"></div>
 
   <script src="app.js"></script>
 </body>

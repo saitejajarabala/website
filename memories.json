@@ -1,30 +1,36 @@
 {
   "site": {
+    "pin": "1430",
     "herName": "My Love",
-    "topLine": "Some memories… and the little stories behind them.",
-    "closingLine": "If I could freeze time, I’d freeze it in the moments where you’re smiling.",
-    "updated": "Feb 2026"
+    "topLine": "Some memories… and the stories behind them.",
+    "updated": "Feb 2026",
+    "audioSrc": "assets/audio/love.mp3",
+    "letterTitle": "To my favorite person ❤️",
+    "letterBody": "Write your final letter here.\n\nKeep it honest.\nKeep it simple.\nNo need to make it long — make it real.\n\n(You can add new lines like this.)",
+    "letterSign": "— Yours"
   },
   "items": [
     {
       "id": "001",
       "type": "image",
-      "title": "Our first picture",
-      "date": "June 2024",
+      "title": "First photo together",
+      "year": 2024,
+      "month": "June",
       "tag": "milestone",
       "src": "assets/images/001.jpg",
       "preview": "The day everything started feeling real.",
-      "story": "Write your full story here. Keep it personal, short, and clean. 4–8 lines is perfect."
+      "story": "Write the story for this photo here."
     },
     {
-      "id": "002",
+      "id": "v01",
       "type": "video",
-      "title": "That little clip I love",
-      "date": "Aug 2024",
+      "title": "That clip I rewatch",
+      "year": 2024,
+      "month": "August",
       "tag": "date",
-      "src": "assets/videos/001.mp4",
-      "preview": "I keep rewatching this and smiling.",
-      "story": "Explain why this moment matters. What you felt. What you noticed about her."
+      "src": "assets/videos/01.mp4",
+      "preview": "This one always makes me smile.",
+      "story": "Write the story behind this video here."
     }
   ]
 }
