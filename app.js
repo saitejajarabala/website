@@ -277,6 +277,21 @@ function spawnHearts(){
 }
 setInterval(spawnHearts, 650);
 
+function markLandscapeCards(root=document){
+  root.querySelectorAll(".card img.thumb").forEach(img => {
+    img.addEventListener("load", () => {
+      const card = img.closest(".card");
+      if(!card) return;
+      if(img.naturalWidth > img.naturalHeight) card.classList.add("landscape");
+    }, { once:true });
+
+    if(img.complete) {
+      const card = img.closest(".card");
+      if(card && img.naturalWidth > img.naturalHeight) card.classList.add("landscape");
+    }
+  });
+}
+
 // PIN (simple + classy; NOT real security)
 function unlockIfCorrect(){
   const entered = (pinInput.value || "").trim();

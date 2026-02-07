@@ -190,12 +190,15 @@ h1{
   transform:translateY(-2px);
 }
 
-/* ✅ FIXED IMAGE RATIOS (GRID) */
 .thumb{
   width:100%;
-  aspect-ratio:4 / 5;   /* portrait-friendly */
-  object-fit:cover;     /* clean crop */
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
   display:block;
+}
+
+.card.landscape .thumb{
+  aspect-ratio: 16 / 9;
 }
 
 /* Card text */
