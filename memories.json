@@ -5,32 +5,32 @@
                  "topLine":  "Some memories and the stories behind them.",
                  "updated":  "Feb 2026",
                  "audioSrc":  "",
-                 "letterTitle":  "To my favorite person ",
+                 "letterTitle":  "కన్నమ్మ పై ప్రేమతో",
                  "letterBody":  "Write your final letter here.",
-                 "letterSign":  " Yours"
+                 "letterSign":  " బుజ్జులు(Bujjullu)"
              },
     "items":  [
                   {
-                      "id":  "001",
+                      "id":  "1",
                       "type":  "image",
-                      "title":  "Memory 001",
-                      "year":  2024,
-                      "month":  "June",
+                      "title":  "Tingari Kannamma",
+                      "year":  2022,
+                      "month":  "23th November 2022",
                       "tag":  "milestone",
                       "src":  "images/001.jpg",
                       "preview":  "Tap to read the story.",
-                      "story":  "Write your story for Memory 001 here."
+                      "story":  "First Tingari moment edo chinna pilla la anipinchidi first time shopping tesukukoni velte tisina dress ki long frok ki nenu shock ayi shake ayinu enti pilla modern kada leda inka chinna pilla anipinchidi naku. Ahh dress tisukona ani adigite nalo nenu navunkuna. but taravta malli shopping ki velipoyimu"
                   },
                   {
-                      "id":  "002",
+                      "id":  "2",
                       "type":  "image",
-                      "title":  "Memory 002",
+                      "title":  "ZRC photoshoot",
                       "year":  2024,
-                      "month":  "June",
+                      "month":  "29th November 2022",
                       "tag":  "milestone",
                       "src":  "images/002.JPG",
                       "preview":  "Tap to read the story.",
-                      "story":  "Write your story for Memory 002 here."
+                      "story":  "ZRC photoshoot ha roju c"
                   },
                   {
                       "id":  "003",
