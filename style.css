@@ -190,13 +190,15 @@ h1{
   transform:translateY(-2px);
 }
 
+/* Default: portrait photos */
 .thumb{
-  width:100%;
+  width: 100%;
   aspect-ratio: 4 / 5;
   object-fit: cover;
-  display:block;
+  display: block;
 }
 
+/* Landscape photos get wider cards */
 .card.landscape .thumb{
   aspect-ratio: 16 / 9;
 }

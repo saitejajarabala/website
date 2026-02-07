@@ -277,20 +277,24 @@ function spawnHearts(){
 }
 setInterval(spawnHearts, 650);
 
-function markLandscapeCards(root=document){
+function markLandscapeCards(root = document){
   root.querySelectorAll(".card img.thumb").forEach(img => {
-    img.addEventListener("load", () => {
+    const mark = () => {
       const card = img.closest(".card");
       if(!card) return;
-      if(img.naturalWidth > img.naturalHeight) card.classList.add("landscape");
-    }, { once:true });
+      if(img.naturalWidth > img.naturalHeight){
+        card.classList.add("landscape");
+      }
+    };
 
     if(img.complete) {
-      const card = img.closest(".card");
-      if(card && img.naturalWidth > img.naturalHeight) card.classList.add("landscape");
+      mark();
+    } else {
+      img.addEventListener("load", mark, { once: true });
     }
   });
 }
+
 
 // PIN (simple + classy; NOT real security)
 function unlockIfCorrect(){
@@ -336,6 +340,10 @@ pinInput.addEventListener("keydown", (e) => { if(e.key === "Enter") unlockIfCorr
   showTimeline();
   renderTimeline(ALL);
   renderGallery(ALL);
+  
+  markLandscapeCards(timelineEl);
+  markLandscapeCards(grid);
+
 
   // Lock check
   if(sessionStorage.getItem("opened") === "1"){
