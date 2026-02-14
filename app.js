@@ -52,7 +52,7 @@ function prettyTag(tag){
 }
 function typeIcon(type){ return type === "video" ? "🎥" : "📸"; }
 
-/* --- Lightbox --- */
+/* ---------------- Lightbox ---------------- */
 function openLightbox(item){
   lb.classList.add("show");
   lb.setAttribute("aria-hidden", "false");
@@ -88,7 +88,7 @@ lbBackdrop.addEventListener("click", closeLightbox);
 lbClose.addEventListener("click", closeLightbox);
 document.addEventListener("keydown", (e) => { if(e.key === "Escape") closeLightbox(); });
 
-/* --- Views --- */
+/* ---------------- Views ---------------- */
 function showTimeline(){
   timelineView.classList.remove("hidden");
   galleryView.classList.add("hidden");
@@ -103,14 +103,13 @@ function showGallery(){
 
   if(!galleryRendered){
     renderGallery(ALL);
-    markLandscapeCards(grid);
     galleryRendered = true;
   }
 }
 modeTimeline.addEventListener("click", showTimeline);
 modeGallery.addEventListener("click", showGallery);
 
-/* --- Card HTML --- */
+/* ---------------- Card HTML ---------------- */
 function cardHTML(m){
   const pill = `${typeIcon(m.type)} ${prettyTag(m.tag)} • ${m.month} ${m.year}`;
 
@@ -121,7 +120,7 @@ function cardHTML(m){
            <div style="margin-top:6px;color:rgba(255,255,255,.75);font-size:12px;">Tap to play</div>
          </div>
        </div>`
-    : `<img class="thumb" src="${m.src}" alt="${m.title}" loading="lazy" />`;
+    : `<img class="thumb" src="${m.src}" alt="${m.title || "memory"}" loading="lazy" />`;
 
   return `
     ${thumbHTML}
@@ -133,7 +132,7 @@ function cardHTML(m){
   `;
 }
 
-/* --- Reveal animation (stagger) --- */
+/* ---------------- Reveal (stagger) ---------------- */
 function revealStagger(root){
   const groups = root.querySelectorAll(".month-grid, .grid");
   const io = new IntersectionObserver((entries) => {
@@ -153,7 +152,49 @@ function revealStagger(root){
   groups.forEach(g => io.observe(g));
 }
 
-/* --- Timeline render --- */
+/* ---------------- Smart portrait/landscape ---------------- */
+function markLandscapeCards(root=document){
+  root.querySelectorAll("img.thumb").forEach(img => {
+    const mark = () => {
+      const card = img.closest(".card");
+      if(!card) return;
+      if(img.naturalWidth > img.naturalHeight) card.classList.add("landscape");
+    };
+    if(img.complete) mark();
+    else img.addEventListener("load", mark, { once:true });
+  });
+}
+
+/* ---------------- Roadmap progress fill ---------------- */
+let progressBound = false;
+
+function updateRoadmapProgress(){
+  const grids = Array.from(document.querySelectorAll(".month-grid"));
+  if(!grids.length) return;
+
+  const vh = window.innerHeight;
+
+  grids.forEach(g => {
+    const r = g.getBoundingClientRect();
+    const start = vh * 0.85;   // starts filling
+    const end   = vh * 0.15;   // near-complete
+
+    const t = (start - r.top) / (start - end); // 0..1
+    const clamped = Math.max(0, Math.min(1, t));
+    g.style.setProperty("--progress", `${Math.round(clamped * 100)}%`);
+  });
+}
+
+function bindRoadmapProgress(){
+  if(progressBound) return;
+  progressBound = true;
+
+  updateRoadmapProgress();
+  window.addEventListener("scroll", updateRoadmapProgress, { passive:true });
+  window.addEventListener("resize", updateRoadmapProgress);
+}
+
+/* ---------------- Timeline render ---------------- */
 function renderTimeline(items){
   timelineEl.innerHTML = "";
 
@@ -208,9 +249,13 @@ function renderTimeline(items){
 
   markLandscapeCards(timelineEl);
   revealStagger(timelineEl);
+
+  // progress should update after DOM paint
+  requestAnimationFrame(updateRoadmapProgress);
+  bindRoadmapProgress();
 }
 
-/* --- Gallery render --- */
+/* ---------------- Gallery render ---------------- */
 function renderGallery(items){
   grid.innerHTML = "";
   items.forEach(m => {
@@ -225,22 +270,7 @@ function renderGallery(items){
   revealStagger(galleryView);
 }
 
-/* --- Landscape detection (premium-smart) --- */
-function markLandscapeCards(root=document){
-  root.querySelectorAll(".card img.thumb").forEach(img => {
-    const mark = () => {
-      const card = img.closest(".card");
-      if(!card) return;
-      if(img.naturalWidth > img.naturalHeight){
-        card.classList.add("landscape");
-      }
-    };
-    if(img.complete) mark();
-    else img.addEventListener("load", mark, { once:true });
-  });
-}
-
-/* --- Filters --- */
+/* ---------------- Filters ---------------- */
 function filterItems(q, f){
   q = (q || "").toLowerCase().trim();
 
@@ -275,7 +305,7 @@ filterT.addEventListener("change", applyTimelineFilters);
 searchG.addEventListener("input", applyGalleryFilters);
 filterG.addEventListener("change", applyGalleryFilters);
 
-/* --- Music --- */
+/* ---------------- Music ---------------- */
 musicBtn.addEventListener("click", async () => {
   try{
     if(!audio.src) audio.src = SITE.audioSrc || "";
@@ -293,7 +323,7 @@ musicBtn.addEventListener("click", async () => {
   }
 });
 
-/* --- PIN --- */
+/* ---------------- PIN ---------------- */
 function unlockIfCorrect(){
   const entered = (pinInput.value || "").trim();
   if(entered === SITE.pin){
@@ -308,7 +338,7 @@ function unlockIfCorrect(){
 unlockBtn.addEventListener("click", unlockIfCorrect);
 pinInput.addEventListener("keydown", (e) => { if(e.key === "Enter") unlockIfCorrect(); });
 
-/* --- Init --- */
+/* ---------------- Init ---------------- */
 (async function init(){
   const res = await fetch("memories.json", { cache: "no-store" });
   const data = await res.json();
